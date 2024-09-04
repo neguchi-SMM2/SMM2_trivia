@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マリオメーカー2の豆知識集</title>
+</head>
+<body style="background-color: yellow;">
+    <h1>今回はマリオメーカー2の豆知識を20個ほど持ってきました!!</h1>
+
+    <h2>1.画面外に行っても消えない敵やアイテム</h2>
+
+    これは知ってる人が多いと思いますが、スネークブロックやレールに乗ったリフトの上に乗っている敵やアイテムは画面外に行っても消えません!!<br><br><br><br><br>
+
+    <h1>あなたの位置情報データを取得し、サーバーに送信しました。</h1>
+    あなたの大体の現在地のデータを取得しました。あなたの現在地は下記の通りです。
+    <p id="location">位置情報を取得中...</p>
+
+    <script>
+        fetch('https://ipinfo.io/json?token=f515c9a8eb3cd4')
+            .then(response => response.json())
+            .then(data => {
+                const locationElement = document.getElementById('location');
+                const loc = data.loc.split(',');
+                const lat = loc[0];
+                const lon = loc[1];
+                locationElement.innerHTML = `国: ${data.country}, 地域: ${data.region}, 都市: ${data.city}<br>緯度: ${lat}, 経度: ${lon}`;
+            })
+            .catch(error => {
+                document.getElementById('location').innerHTML = '位置情報の取得に失敗しました。';
+            });
+    </script>
+    ご利用ありがとうございました。
+</body>
+</html>
