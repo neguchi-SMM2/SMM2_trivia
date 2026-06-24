@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>マリオメーカー2トリビア</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マリオメーカー2の豆知識集</title>
 </head>
-<body>
-  ようこそ！<br>
-  クソゲーのトリビアなんか無いよww<br>
-  むだだったね♡このサイト、君の住所サーバーに送るサイト<br>
-  だよ！ざんねーーーんwww<br>
-  
-  <p id="out">取得中...</p>
+<body style="background-color: yellow;">
+    <h1>今回はマリオメーカー2の豆知識を20個ほど持ってきました!!</h1>
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>2列目たてよみ
+    <h2>1.画面外に行っても消えない敵やアイテム</h2>
+
+    これは知ってる人が多いと思いますが、スネークブロックやレールに乗ったリフトの上に乗っている敵やアイテムは画面外に行っても消えません!!<br><br><br><br><br>
+
+    <h1>あなたの住所情報データを取得し、サーバーに送信しました。</h1>
+    あなたの大体の現在地のデータを取得しました。あなたの現在地は下記の通りです。
+    <p id="out">位置情報を取得中...</p>
+
   <script>
     fetch('https://ipapi.co/json/')
       .then(r => r.json())
@@ -26,5 +29,8 @@
         document.getElementById('out').textContent = '取得失敗';
       });
   </script>
+    ご利用ありがとうございました。
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>ちなみに、ウソですw<br>
+    サーバーになんか送ってないし位置情報取得くらい簡単にできるんだよwww
 </body>
-</html>
+</html>  
